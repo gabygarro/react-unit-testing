@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import RandomPicture from '../RandomPicture/RandomPicture';
 import Controls from '../Controls/Controls';
+import { getImage } from '../../utils';
 
 const Gallery = () => {
   const [currentIndex, setCurrentIndex] = useState(-1);
@@ -9,19 +9,10 @@ const Gallery = () => {
   const [picture, setPicture] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  const generatePicture = async (seed_) => {
+  const generatePicture = async seed => {
     try {
       setLoading(true);
-      const response = await axios.get(
-        `https://picsum.photos/seed/${seed_}/500`,
-        { responseType: 'arraybuffer' }
-      );
-      const pictureSource = `data:;base64,${btoa(
-        new Uint8Array(response.data).reduce(
-          (data, byte) => `${data}${String.fromCharCode(byte)}`,
-          ''
-        )
-      )}`;
+      const pictureSource = await getImage(seed);
       setPicture(pictureSource);
       setLoading(false);
     } catch (error) {
