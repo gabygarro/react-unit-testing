@@ -1,19 +1,71 @@
 # react-unit-testing
 Small example of best practices in unit testing in web development.
 
-## What is unit testing?
-Unit testing takes care of a single unit of code at a time; the smaller it is, the easier it can be tested. To a certain extent you want to limit the dependencies, integration or framework specifics in them. They comprise most of the testing code (if not all) of normal projects and are usually tested automatically in a CI pipeline.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-### What are other types of testing?
-#### Integration tests
-Integration tests take care of testing communication with a database, file system, service, library dependency or even another of your own modules. Their setup is usually slower because it requires setting up some kind of testing environment.
+## Available Scripts
 
-#### Functional tests
-Functional tests make sure that the app is behaving correctly from the user's point of view.
+In the project directory, you can run:
 
-## Why should I invest my time in unit testing?
-The habit of making unit tests isn't just about testing the component's behaviour.
+### `npm start`
 
-1. *Improve architecture:* When you start building a component while thinking about the unit tests it'll need, it will help to structure the code better and achieve a better separation of responsibilities. If the component looks like it's going to need a lot of test cases to fully test or if the test implementation is getting too complicated, it means that the component is too large or complex and you should split up its responsibilities and test them separately.
-2. *Define functionality before coding:* What should happen if a function's parameter is null? What should happen if the parameter's type is wrong? You can use a separate test for each possible case, pass it the wrong/correct parameter and assert if it was what you were expecting.
-3. *Stop worrying so much and wasting your time:* Be confident that the fix you just made fixes the bug and nothing else is affected. Thorough unit tests save time because they help to discover potential issues before deployment. A good practice when fixing bugs is to add a test that makes sure that the bug won't happen again.
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
+
+### `npm test`
+
+Launches the test runner in the interactive watch mode.<br />
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.<br />
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.<br />
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+
+### Analyzing the Bundle Size
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+
+### Making a Progressive Web App
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+
+### Advanced Configuration
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+
+### Deployment
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+
+### `npm run build` fails to minify
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
