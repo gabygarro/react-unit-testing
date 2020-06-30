@@ -5,7 +5,7 @@ const RandomPicture = ({ picture, loading }) => {
   return (
     <div style={{ padding: 8, height: 500, width: 500 }}>
       {loading && <Loader />}
-      {!loading && picture && <img alt="" src={picture} />}
+      {!loading && picture && <img data-testid="picture" alt="" src={picture} />}
     </div>
   );
 };
